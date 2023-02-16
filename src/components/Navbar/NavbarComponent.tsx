@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { BsFillBellFill } from "react-icons/bs";
 import { BiMenu } from "react-icons/bi";
+import { Notification, UserMenu } from '../Navbar';
+
 
 export const Navbar = () => {
   return (
@@ -33,19 +34,8 @@ export const Navbar = () => {
             >
               Mi recibo de nómina
             </Link>
-            <div className="relative">
-              <div className="w-3 h-3 rounded-full bg-red-600 border border-white absolute -top-1 right-0"></div>
-              <BsFillBellFill className="text-white text-2xl" />
-            </div>
-            <div className="relative">
-              <div className="w-10 h-10 border-2 border-white rounded-full">
-                <img
-                  src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/170.jpg"
-                  className="object-fill w-full h-full rounded-full"
-                  alt="avatar"
-                />
-              </div>
-            </div>
+            <Notification />
+            <UserMenu />
             <BiMenu className="text-white text-2xl block lg:hidden" />
           </div>
         </div>

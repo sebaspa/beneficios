@@ -19,8 +19,11 @@
     @apply block absolute bottom-0 w-full h-1 rounded-t -ml-4 bg-persian-green-50;
   }
 
-
   .btn-contained-primary {
     @apply bg-persian-green-100 text-black font-medium  rounded-3xl border border-persian-green-400 hover:bg-persian-green-200;
+  }
+
+  .btn-outlined-primary {
+    @apply rounded-3xl border bg-white border-persian-green-200 text-persian-green-400 hover:bg-persian-green-50;
   }
 }
