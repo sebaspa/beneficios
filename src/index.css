@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@layer components {
+  /*
+  Main menu
+  */
+  .mainMenu__a {
+    @apply text-white px-4 py-5 hover:text-persian-green-50 relative;
+  }
+
+  .mainMenu__a-selected::before {
+    content: "";
+    @apply block absolute bottom-0 w-full h-1 rounded-t -ml-4 bg-persian-green-50;
+  }
+
+  /*
+  Menu mobile
+  */
+  .mobileMainMenu {
+    @apply rounded-lg;
+  }
+  .mobileMainMenu li {
+    @apply border-t border-gray-200;
+  }
+  .mobileMainMenu li:first-child {
+    @apply border-0;
+  }
+  .mobileMainMenu li:first-child a {
+    @apply rounded-t-lg;
+  }
+  .mobileMainMenu li a {
+    @apply text-persian-green-400 text-base py-4 px-4 block;
+  }
+  
+  /*
+  Botones
+  */
+
+  .btn-contained-primary {
+    @apply bg-persian-green-100 text-black font-medium  rounded-3xl border border-persian-green-400 hover:bg-persian-green-200;
+  }
+
+  .btn-outlined-primary {
+    @apply rounded-3xl border bg-white border-persian-green-200 text-persian-green-400 hover:bg-persian-green-50;
+  }
+}
