@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import { BiMenu } from "react-icons/bi";
-import { Notification, UserMenu } from '../Navbar';
+import { Link, NavLink } from "react-router-dom";
+import { MoblieMenu, Notification, UserMenu } from '../Navbar';
 
 
 export const Navbar = () => {
@@ -13,18 +12,18 @@ export const Navbar = () => {
               <div className="w-28 h-8 bg-gray-500"></div>
             </Link>
             <div className="hidden lg:flex font-medium text-sm mainMenu">
-              <Link to="/" className="mainMenu__a mainMenu__a-selected">
+              <NavLink to="/" className="mainMenu__a mainMenu__a-selected">
                 <span>Mi compensación</span>
-              </Link>
-              <Link to="/" className="mainMenu__a">
+              </NavLink>
+              <NavLink to="/" className="mainMenu__a">
                 <span>Vacaciones</span>
-              </Link>
-              <Link to="/" className="mainMenu__a">
+              </NavLink>
+              <NavLink to="/" className="mainMenu__a">
                 <span>Beneficios</span>
-              </Link>
-              <Link to="/" className="mainMenu__a">
+              </NavLink>
+              <NavLink to="/" className="mainMenu__a">
                 <span>Certificados</span>
-              </Link>
+              </NavLink>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -36,7 +35,7 @@ export const Navbar = () => {
             </Link>
             <Notification />
             <UserMenu />
-            <BiMenu className="text-white text-2xl block lg:hidden" />
+            <MoblieMenu />
           </div>
         </div>
       </div>
