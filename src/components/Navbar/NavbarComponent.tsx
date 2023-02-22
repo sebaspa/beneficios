@@ -1,8 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
-import { MoblieMenu, Notification, UserMenu } from '../Navbar';
-
+import { useTranslation } from "react-i18next";
+import { MoblieMenu, Notification, UserMenu } from "../Navbar";
 
 export const Navbar = () => {
+  const [t] = useTranslation("global");
   return (
     <div className="bg-cod-gray-900 min-h-[60px] pt-2 lg:pt-0">
       <div className="container px-4 mx-auto">
@@ -13,16 +14,16 @@ export const Navbar = () => {
             </Link>
             <div className="hidden lg:flex font-medium text-sm mainMenu">
               <NavLink to="/" className="mainMenu__a mainMenu__a-selected">
-                <span>Mi compensación</span>
+                <span>{t("navbar.my-compensation")}</span>
               </NavLink>
               <NavLink to="/" className="mainMenu__a">
-                <span>Vacaciones</span>
+                <span>{t("navbar.vacations")}</span>
               </NavLink>
               <NavLink to="/" className="mainMenu__a">
-                <span>Beneficios</span>
+                <span>{t("navbar.benefits")}</span>
               </NavLink>
               <NavLink to="/" className="mainMenu__a">
-                <span>Certificados</span>
+                <span>{t("navbar.certificates")}</span>
               </NavLink>
             </div>
           </div>
@@ -31,7 +32,7 @@ export const Navbar = () => {
               to="/"
               className="btn-contained-primary text-sm px-5 py-3 hidden lg:block"
             >
-              Mi recibo de nómina
+             {t("navbar.my-payroll-receipt")}
             </Link>
             <Notification />
             <UserMenu />
