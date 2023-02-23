@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import { NavLink } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 
 export const MoblieMenu = () => {
+  const [t] = useTranslation("global");
   const [showMenu, setShowMenu] = useState(false);
 
   const handleShowMenu = () => {
@@ -17,17 +19,17 @@ export const MoblieMenu = () => {
           <ul className="mobileMainMenu">
             <li className="border-t border-gray-200">
               <NavLink to="/" className="bg-persian-green-50">
-                Mi compensación
+              {t("navbar.my-compensation")}
               </NavLink>
             </li>
             <li className="border-t border-gray-200">
-              <NavLink to="/">Vacaciones</NavLink>
+              <NavLink to="/">{t("navbar.vacations")}</NavLink>
             </li>
             <li className="border-t border-gray-200">
-              <NavLink to="/">Beneficios</NavLink>
+              <NavLink to="/">{t("navbar.benefits")}</NavLink>
             </li>
             <li className="border-t border-gray-200">
-              <NavLink to="/">Certificados</NavLink>
+              <NavLink to="/">{t("navbar.certificates")}</NavLink>
             </li>
           </ul>
         </div>
