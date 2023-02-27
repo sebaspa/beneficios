@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
+import { menuItems } from "../../constants";
 
 export const MoblieMenu = () => {
   const [t] = useTranslation("global");
@@ -17,20 +18,15 @@ export const MoblieMenu = () => {
       {showMenu && (
         <div className="absolute bg-white shadow-md top-10 right-0 z-30 w-max rounded-lg">
           <ul className="mobileMainMenu">
-            <li className="border-t border-gray-200">
-              <NavLink to="/" className="bg-persian-green-50">
-              {t("navbar.my-compensation")}
-              </NavLink>
-            </li>
-            <li className="border-t border-gray-200">
-              <NavLink to="/">{t("navbar.vacations")}</NavLink>
-            </li>
-            <li className="border-t border-gray-200">
-              <NavLink to="/">{t("navbar.benefits")}</NavLink>
-            </li>
-            <li className="border-t border-gray-200">
-              <NavLink to="/">{t("navbar.certificates")}</NavLink>
-            </li>
+            <>
+              {menuItems.map((item) => (
+                <li className="border-t border-gray-200" key={item.id}>
+                  <NavLink to={item.url}>
+                    {t(item.name)}
+                  </NavLink>
+                </li>
+              ))}
+            </>
           </ul>
         </div>
       )}

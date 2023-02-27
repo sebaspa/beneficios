@@ -17,7 +17,7 @@
     @apply text-white px-4 py-5 hover:text-persian-green-50 relative;
   }
 
-  .mainMenu__a-selected::before {
+  .mainMenu__a.active::before {
     content: "";
     @apply block absolute bottom-0 w-full h-1 rounded-t -ml-4 bg-persian-green-50;
   }
@@ -40,7 +40,10 @@
   .mobileMainMenu li a {
     @apply text-persian-green-400 text-base py-4 px-4 block;
   }
-  
+  .mobileMainMenu li a.active {
+    @apply bg-persian-green-50;
+  }
+
   /*
   Botones
   */
