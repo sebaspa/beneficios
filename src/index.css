@@ -55,4 +55,15 @@
   .btn-outlined-primary {
     @apply rounded-3xl border bg-white border-persian-green-200 text-persian-green-400 hover:bg-persian-green-50;
   }
+
+  /*Formularios*/
+
+  .inputText-primary {
+    @apply form-input text-sm px-3 py-2 rounded-md w-full focus:outline-none focus:border-persian-green-400 focus:ring-1 focus:ring-persian-green-400
+  }
+
+  .inputText-primary:focus-within ~ label,
+  .inputText-primary:not(:placeholder-shown) ~ label {
+    @apply transform scale-75 -translate-y-4 -translate-x-2 text-persian-green-400 bg-white px-2;
+  }
 }

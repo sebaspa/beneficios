@@ -19,15 +19,28 @@ export const Login = () => {
           <p className="text-2xl md:text-3xl text-black">
             ¡Te damos la bienvenida!
           </p>
+          <div className="my-4">
           <ChangeLanguage />
+          </div>
           <form className="w-full">
-            <div className="relative">
+            <div className="relative mb-6">
               <input
                 type="email"
-                className="form-input px-4 py-3 rounded-md w-full"
+                placeholder=" "
+                className="inputText-primary"
               />
-              <label className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">
+              <label className="absolute top-2 left-3 text-sm duration-300 origin-top-left">
                 Email
+              </label>
+            </div>
+            <div className="relative mb-6">
+              <input
+                type="password"
+                placeholder=" "
+                className="inputText-primary"
+              />
+              <label className="absolute top-2 left-3 text-sm duration-300 origin-top-left">
+                Contraseña
               </label>
             </div>
           </form>
