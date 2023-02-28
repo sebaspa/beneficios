@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { BiHelpCircle } from "react-icons/bi";
 import { MdLogout } from "react-icons/md";
-import { ChangeLanguage } from "./ChangeLanguage";
+import { ChangeLanguage } from "../Language/ChangeLanguage";
 
 export const UserMenuOptions = () => {
   const [t] = useTranslation("global");
