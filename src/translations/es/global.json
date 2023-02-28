@@ -20,5 +20,15 @@
     "email": "Email",
     "password": "Contraseña",
     "log-in": "Iniciar sesión"
+  },
+  "validations": {
+    "password-is-required": "La contraseña es requerida",
+    "email-is-required": "El email es requerido",
+    "email-not-valid": "El email no es válido",
+    "password-not-valid": "La contraseña debe contener 8 o más caracteres, al menos uno de cada tipo: mayúsculas, minúsculas, números y especiales",
+    "password-contain-1-lower-case-letter": "La contraseña debe contener al menos 1 letra minúscula",
+    "password-contain-1-upper-case-letter": "La contraseña debe contener al menos 1 letra mayúscula",
+    "password-contain-1-number": "La contraseña debe contener al menos 1 número",
+    "password-contain-1-special-character": "La contraseña debe contener al menos un carácter especial"
   }
 }

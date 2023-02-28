@@ -20,5 +20,15 @@
     "email": "Email",
     "password": "Password",
     "log-in": "Log in"
+  },
+  "validations": {
+    "password-is-required": "Password is required",
+    "email-is-required": "Email is required",
+    "email-not-valid": "Email is not valid",
+    "password-not-valid": "Password must contain 8 or more characters with at least one of each: uppercase, lowercase, number and special",
+    "password-contain-1-lower-case-letter": "Password must contain at least 1 lower case letter",
+    "password-contain-1-upper-case-letter": "Password must contain at least 1 upper case letter",
+    "password-contain-1-number": "Password must contain at least 1 number",
+    "password-contain-1-special-character": "Password must contain at least 1 special character"
   }
 }
