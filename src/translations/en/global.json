@@ -14,5 +14,11 @@
     "privacy-notice": "Privacy Notice",
     "user-support": "User support",
     "copyright": "Diblo Corporate. All rights reserved 2020. ©2020 ANHEUSER-BUSCH INBEV S.A."
+  },
+  "login": {
+    "we-welcome-you": "We welcome you",
+    "email": "Email",
+    "password": "Password",
+    "log-in": "Log in"
   }
 }

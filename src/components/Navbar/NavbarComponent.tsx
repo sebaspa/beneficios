@@ -5,7 +5,6 @@ import { menuItems } from "../../constants";
 
 export const Navbar = () => {
   const [t] = useTranslation("global");
-  console.log(menuItems);
   return (
     <div className="bg-cod-gray-900 min-h-[60px] pt-2 lg:pt-0">
       <div className="container px-4 mx-auto">
