@@ -2,11 +2,18 @@
   "users": [
     {
       "email": "sebaspa0107@yopmail.com",
-      "password": "$2a$10$4ulzgRT61iN8TZmLQ89y9OGCTVEGQobwXTGB5q3pj7z6ra4DxHJAe",
-      "id": "m-INrUV",
+      "password": "$2a$10$XKtV/uLWXh4f4g94MnhF1.196WrW6xeI3t/rSNqnIoEEctF3qMRVi",
       "name": "Juan Sebastian",
       "lastname": "Parra Manchola",
-      "username": "sebaspa0107"
+      "username": "sebaspa0107",
+      "sharpId": "0123456789",
+      "photo": "https://i.pravatar.cc/150?u=sebaspa0107",
+      "country": "Colombia",
+      "company": "Bavaria",
+      "job": "Front end developer",
+      "band": "VII-B",
+      "vc": "People",
+      "id": "R069VEI"
     }
   ],
   "posts": [

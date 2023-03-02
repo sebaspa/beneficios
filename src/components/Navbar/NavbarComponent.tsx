@@ -4,7 +4,7 @@ import { MoblieMenu, Notification, UserMenu } from "../Navbar";
 import { menuItems } from "../../constants";
 
 export const Navbar = () => {
-  const [t] = useTranslation("global");
+  const [t] = useTranslation();
   return (
     <div className="bg-cod-gray-900 min-h-[60px] pt-2 lg:pt-0">
       <div className="container px-4 mx-auto">

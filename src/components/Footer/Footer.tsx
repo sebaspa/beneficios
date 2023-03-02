@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
-  const [t] = useTranslation("global");
+  const [t] = useTranslation();
   return (
     <div className="bg-persian-green-200 py-4">
       <div className="container mx-auto px-4">

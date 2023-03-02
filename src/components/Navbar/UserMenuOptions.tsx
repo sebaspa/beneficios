@@ -5,7 +5,7 @@ import { MdLogout } from "react-icons/md";
 import { ChangeLanguage } from "../Language/ChangeLanguage";
 
 export const UserMenuOptions = () => {
-  const [t] = useTranslation("global");
+  const [t] = useTranslation();
   return (
     <div className="pt-2 absolute -right-10 md:right-0 top-10 z-10">
       <div className="w-72 bg-white shadow-md rounded-lg ">

@@ -1,14 +1,24 @@
+import { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useAppDispatch } from "../../hooks/redux";
+import { loginUser } from "../../features/user/userSlice";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import YupPassword from "yup-password";
 import { useTranslation } from "react-i18next";
 import { AiFillInfoCircle } from "react-icons/ai";
 
+import { RootState } from "../../store";
+
 export const FormLogin = () => {
+  const { user, isLoading } = useSelector((store: RootState) => store.user);
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   YupPassword(Yup);
-  const [t] = useTranslation("global");
+  const [t] = useTranslation();
   const textEmailRequired = t("validations.email-is-required");
-  const textEmailValidate = t("validations.email-is-not-valid");
+  const textEmailValidate = t("validations.email-not-valid");
   const textPasswordRequired = t("validations.password-is-required");
   const textPasswordNotValid = t("validations.password-not-valid");
   const textPasswordContainlowerCaseLetter = t(
@@ -39,8 +49,17 @@ export const FormLogin = () => {
     }),
     onSubmit: (values) => {
       console.log(JSON.stringify(values, null, 2));
+      dispatch(loginUser(values));
     },
   });
+
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
+    }
+  }, [user]);
 
   return (
     <form className="w-full max-w-md" onSubmit={formik.handleSubmit}>
@@ -102,6 +121,7 @@ export const FormLogin = () => {
         <button
           type="submit"
           className="btn-contained-primary px-4 py-2 w-full md:w-auto"
+          disabled={isLoading}
         >
           {t("login.log-in")}
         </button>

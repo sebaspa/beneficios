@@ -1,4 +1,5 @@
 {
+  "key": "hello world",
   "navbar": {
     "my-compensation": "Mi compensación",
     "vacations": "Vacaciones",
@@ -19,7 +20,8 @@
     "we-welcome-you": "Te damos la bienvenida",
     "email": "Email",
     "password": "Contraseña",
-    "log-in": "Iniciar sesión"
+    "log-in": "Iniciar sesión",
+    "login-failed": "Error al iniciar sesión, por favor intente nuevamente"
   },
   "validations": {
     "password-is-required": "La contraseña es requerida",
@@ -30,5 +32,8 @@
     "password-contain-1-upper-case-letter": "La contraseña debe contener al menos 1 letra mayúscula",
     "password-contain-1-number": "La contraseña debe contener al menos 1 número",
     "password-contain-1-special-character": "La contraseña debe contener al menos un carácter especial"
+  },
+  "user": {
+    "greeting": "hola {{name}}"
   }
 }

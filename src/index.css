@@ -49,7 +49,7 @@
   */
 
   .btn-contained-primary {
-    @apply bg-persian-green-100 text-black font-medium  rounded-3xl border border-persian-green-400 hover:bg-persian-green-200;
+    @apply bg-persian-green-100 text-black font-medium  rounded-3xl border border-persian-green-400 hover:bg-persian-green-200 disabled:bg-gray-300 disabled:text-gray-500 disabled:border-gray-400 disabled:cursor-not-allowed;
   }
 
   .btn-outlined-primary {

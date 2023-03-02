@@ -5,7 +5,7 @@ import { BiMenu } from "react-icons/bi";
 import { menuItems } from "../../constants";
 
 export const MoblieMenu = () => {
-  const [t] = useTranslation("global");
+  const [t] = useTranslation();
   const [showMenu, setShowMenu] = useState(false);
 
   const handleShowMenu = () => {
