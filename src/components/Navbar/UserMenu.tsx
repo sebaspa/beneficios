@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { UserMenuOptions } from "../Navbar";
+import React, { useState } from 'react'
+import { UserMenuOptions } from '../Navbar'
 
-export const UserMenu = () => {
-  const [viewMenu, setViewMenu] = useState(false);
+export const UserMenu = (): JSX.Element => {
+  const [viewMenu, setViewMenu] = useState(false)
 
   const handleAvatarMenu = () => {
-    setViewMenu(!viewMenu);
-  };
+    setViewMenu(!viewMenu)
+  }
 
   return (
     <div className="relative">
@@ -22,5 +22,5 @@ export const UserMenu = () => {
       </div>
       {viewMenu && <UserMenuOptions />}
     </div>
-  );
-};
+  )
+}

@@ -1,11 +1,11 @@
-import { Route, Routes } from "react-router";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { MainLayout } from "./layouts";
-import { Home, Login, ProtectedRoute } from "./pages";
-import { Test } from "./pages/Test";
+import { Route, Routes } from 'react-router'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { MainLayout } from './layouts'
+import { Home, Login, ProtectedRoute } from './pages'
+import { Test } from './pages/Test'
 
-export const App = () => {
+export const App = (): JSX.Element => {
   return (
     <>
       <Routes>
@@ -24,5 +24,5 @@ export const App = () => {
       </Routes>
       <ToastContainer position="top-center" />
     </>
-  );
-};
+  )
+}

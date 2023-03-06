@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { BiHelpCircle } from "react-icons/bi";
-import { MdLogout } from "react-icons/md";
-import { ChangeLanguage } from "../Language/ChangeLanguage";
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { BiHelpCircle } from 'react-icons/bi'
+import { MdLogout } from 'react-icons/md'
+import { ChangeLanguage } from '../Language/ChangeLanguage'
 
-export const UserMenuOptions = () => {
-  const [t] = useTranslation();
+export const UserMenuOptions = (): JSX.Element => {
+  const [t] = useTranslation()
   return (
     <div className="pt-2 absolute -right-10 md:right-0 top-10 z-10">
       <div className="w-72 bg-white shadow-md rounded-lg ">
@@ -28,7 +28,7 @@ export const UserMenuOptions = () => {
         <ChangeLanguage />
         <div className="text-center py-7">
           <Link to="/" className="text-sm px-5 py-3 btn-outlined-primary">
-            {t("navbar.view-my-profile")}
+            {t('navbar.view-my-profile')}
           </Link>
         </div>
         <ul>
@@ -38,7 +38,7 @@ export const UserMenuOptions = () => {
               className="flex items-center gap-3 text-persian-green-400 text-base"
             >
               <BiHelpCircle />
-              <p>{t("navbar.help")}</p>
+              <p>{t('navbar.help')}</p>
             </Link>
           </li>
           <li className="border-t border-gray-200 py-4 px-4">
@@ -47,11 +47,11 @@ export const UserMenuOptions = () => {
               className="flex items-center gap-3 text-persian-green-400 text-base"
             >
               <MdLogout />
-              <p>{t("navbar.log-out")}</p>
+              <p>{t('navbar.log-out')}</p>
             </Link>
           </li>
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
