@@ -5,7 +5,7 @@ export const loginUserThunk = async (
   url: string,
   user: User,
   thunkAPI: any
-) => {
+): Promise<any> => {
   try {
     const resp = await customFetch.post(url, user)
     return resp.data

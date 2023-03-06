@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-export const ChangeLanguage = () => {
-  const [t, i18n] = useTranslation()
+export const ChangeLanguage = (): JSX.Element => {
+  const [, i18n] = useTranslation()
   const [lang, setlang] = useState('es')
 
-  const handleChangeLanguage = (lang: string) => {
+  const handleChangeLanguage = (lang: string): void => {
     i18n.changeLanguage(lang)
     setlang(lang)
   }

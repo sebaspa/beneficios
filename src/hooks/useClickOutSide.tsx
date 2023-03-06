@@ -2,12 +2,12 @@ import { useEffect, useRef } from 'react'
 
 export const useClickOutside = (
   handler: (value: React.SetStateAction<boolean>) => void
-) => {
+): React.RefObject<HTMLDivElement> => {
   const domNode = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const maybeHandlerClick = (event: MouseEvent) => {
-      if (!domNode.current?.contains(event.target as Element)) {
+    const maybeHandlerClick = (event: MouseEvent): void => {
+      if (domNode.current?.contains(event.target as Element) !== undefined && !domNode.current?.contains(event.target as Element)) {
         handler(false)
       }
     }

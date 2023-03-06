@@ -4,7 +4,7 @@ import { UserMenuOptions } from '../Navbar'
 export const UserMenu = (): JSX.Element => {
   const [viewMenu, setViewMenu] = useState(false)
 
-  const handleAvatarMenu = () => {
+  const handleAvatarMenu = (): void => {
     setViewMenu(!viewMenu)
   }
 

@@ -8,7 +8,7 @@ export const MoblieMenu = (): JSX.Element => {
   const [t] = useTranslation()
   const [showMenu, setShowMenu] = useState(false)
 
-  const handleShowMenu = () => {
+  const handleShowMenu = (): void => {
     setShowMenu(!showMenu)
   }
 

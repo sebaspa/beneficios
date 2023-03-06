@@ -54,7 +54,7 @@ export const FormLogin = (): JSX.Element => {
   })
 
   useEffect(() => {
-    if (user) {
+    if (user !== null) {
       navigate('/')
     }
   }, [user])
@@ -66,7 +66,8 @@ export const FormLogin = (): JSX.Element => {
           type="email"
           placeholder=" "
           className={
-            formik.touched.email && formik.errors.email
+            formik.touched.email !== undefined &&
+            formik.errors.email !== undefined
               ? 'inputText-primary inputText-primary-red'
               : 'inputText-primary inputText-primary-green'
           }
@@ -77,13 +78,17 @@ export const FormLogin = (): JSX.Element => {
         />
         <AiFillInfoCircle
           className={`absolute text-red-600 top-3 right-3 text-md ${
-            formik.touched.email && formik.errors.email ? 'block' : 'hidden'
+            formik.touched.email !== undefined &&
+            formik.errors.email !== undefined
+              ? 'block'
+              : 'hidden'
           }`}
         />
         <label className="absolute top-2 left-3 text-sm duration-300 origin-top-left -z-10">
           {t('login.email')}
         </label>
-        {formik.touched.email && formik.errors.email
+        {formik.touched.email !== undefined &&
+        formik.errors.email !== undefined
           ? (
           <p className="text-red-600 text-xs mt-1">{formik.errors.email}</p>
             )
@@ -94,7 +99,8 @@ export const FormLogin = (): JSX.Element => {
           type="password"
           placeholder=" "
           className={
-            formik.touched.password && formik.errors.password
+            formik.touched.password !== undefined &&
+            formik.errors.password !== undefined
               ? 'inputText-primary inputText-primary-red'
               : 'inputText-primary inputText-primary-green'
           }
@@ -105,7 +111,8 @@ export const FormLogin = (): JSX.Element => {
         />
         <AiFillInfoCircle
           className={`absolute text-red-600 top-3 right-3 text-md ${
-            formik.touched.password && formik.errors.password
+            formik.touched.password !== undefined &&
+            formik.errors.password !== undefined
               ? 'block'
               : 'hidden'
           }`}
@@ -113,7 +120,8 @@ export const FormLogin = (): JSX.Element => {
         <label className="absolute top-2 left-3 text-sm duration-300 origin-top-left -z-10">
           {t('login.password')}
         </label>
-        {formik.touched.password && formik.errors.password
+        {formik.touched.password !== undefined &&
+        formik.errors.password !== undefined
           ? (
           <p className="text-red-600 text-xs mt-1">{formik.errors.password}</p>
             )
