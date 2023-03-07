@@ -1,10 +1,10 @@
-import { type User } from '../../types/user'
+import { type UserLogin } from '../../types/user'
 import customFetch from '../../utils/axios'
 import { logoutUser } from './userSlice'
 
 export const loginUserThunk = async (
   url: string,
-  user: User,
+  user: UserLogin,
   thunkAPI: any
 ): Promise<any> => {
   try {

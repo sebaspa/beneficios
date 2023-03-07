@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { type RootState } from '../../store'
 import { useAppDispatch } from '../../hooks/redux'
 import { loginUser } from '../../features/user/userSlice'
 import { useFormik } from 'formik'
@@ -8,8 +9,6 @@ import * as Yup from 'yup'
 import YupPassword from 'yup-password'
 import { useTranslation } from 'react-i18next'
 import { AiFillInfoCircle } from 'react-icons/ai'
-
-import { type RootState } from '../../store'
 
 export const FormLogin = (): JSX.Element => {
   const { user, isLoading } = useSelector((store: RootState) => store.user)

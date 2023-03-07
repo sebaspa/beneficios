@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import i18n from 'i18next'
 import { toast } from 'react-toastify'
-import { type User, type userInitialState } from '../../types/user'
+import { type UserLogin, type userInitialState } from '../../types/user'
 import {
   getUserFromLocalStorage,
   setLocalStorage
@@ -16,7 +16,7 @@ const initialState: userInitialState = {
 
 export const loginUser = createAsyncThunk(
   'user/loginUser',
-  async (user: User, thunkAPI) => {
+  async (user: UserLogin, thunkAPI) => {
     return await loginUserThunk('/login', user, thunkAPI)
   }
 )

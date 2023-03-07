@@ -16,3 +16,8 @@ export interface userInitialState {
   isLoading: boolean
   user: User | null
 }
+
+export interface UserLogin {
+  email: string
+  password: string
+}
