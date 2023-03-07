@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { UserMenuOptions } from '../Navbar'
 
+import { type RootState } from '../../store'
+
 export const UserMenu = (): JSX.Element => {
+  const { user } = useSelector((store: RootState) => store.user)
   const [viewMenu, setViewMenu] = useState(false)
 
   const handleAvatarMenu = (): void => {
@@ -15,7 +19,7 @@ export const UserMenu = (): JSX.Element => {
         onClick={handleAvatarMenu}
       >
         <img
-          src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/170.jpg"
+          src={user?.photo}
           className="object-fill w-full h-full rounded-full avatar"
           alt="avatar"
         />

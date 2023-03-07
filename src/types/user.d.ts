@@ -10,6 +10,7 @@ export interface User {
   name: string
   photo: string
   username: string
+  sharpId: string
   vc: string
 }
 export interface userInitialState {

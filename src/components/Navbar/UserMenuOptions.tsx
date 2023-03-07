@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 import { useAppDispatch } from '../../hooks/redux'
 import { clearStore } from '../../features/user/userSlice'
 import { ChangeLanguage } from '../Language/ChangeLanguage'
+import { type RootState } from '../../store'
 
 import { BiHelpCircle } from 'react-icons/bi'
 import { MdLogout } from 'react-icons/md'
@@ -10,8 +12,8 @@ import { MdLogout } from 'react-icons/md'
 export const UserMenuOptions = (): JSX.Element => {
   const [t] = useTranslation()
   const dispatch = useAppDispatch()
+  const { user } = useSelector((store: RootState) => store.user)
   const handleClearStore = async (): Promise<void> => {
-    console.log('Click')
     await dispatch(clearStore('Loggin out...'))
   }
   return (
@@ -19,7 +21,7 @@ export const UserMenuOptions = (): JSX.Element => {
       <div className="w-72 bg-white shadow-md rounded-lg ">
         <div className="w-full py-5">
           <img
-            src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/170.jpg"
+            src={user?.photo}
             className="mx-auto w-20 h-20 rounded-full border-4 border-persian-green-400"
             loading="lazy"
             alt="avatar"
@@ -27,11 +29,11 @@ export const UserMenuOptions = (): JSX.Element => {
         </div>
         <div className="text-center">
           <p className="font-medium text-base text-persian-green-400 mb-2">
-            Nombre del usuario
+            {user?.name}
           </p>
-          <p className="text-black text-sm mb-1">Posición</p>
-          <p className="text-black text-sm mb-1">0123456789</p>
-          <p className="text-black text-sm mb-1">nombre@ab-inbev.com</p>
+          <p className="text-black text-sm mb-1">{user?.job}</p>
+          <p className="text-black text-sm mb-1">{user?.sharpId}</p>
+          <p className="text-black text-sm mb-1">{user?.email}</p>
         </div>
         <ChangeLanguage />
         <div className="text-center py-7">
