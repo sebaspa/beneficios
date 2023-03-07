@@ -34,6 +34,7 @@
     "password-contain-1-special-character": "La contraseña debe contener al menos un carácter especial"
   },
   "user": {
-    "greeting": "hola {{name}}"
+    "greeting": "hola {{name}}",
+    "welcome-name": "Bienvenido {{name}}"
   }
 }

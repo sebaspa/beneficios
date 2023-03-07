@@ -1,11 +1,19 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useAppDispatch } from '../../hooks/redux'
+import { clearStore } from '../../features/user/userSlice'
+import { ChangeLanguage } from '../Language/ChangeLanguage'
+
 import { BiHelpCircle } from 'react-icons/bi'
 import { MdLogout } from 'react-icons/md'
-import { ChangeLanguage } from '../Language/ChangeLanguage'
 
 export const UserMenuOptions = (): JSX.Element => {
   const [t] = useTranslation()
+  const dispatch = useAppDispatch()
+  const handleClearStore = async (): Promise<void> => {
+    console.log('Click')
+    await dispatch(clearStore('Loggin out...'))
+  }
   return (
     <div className="pt-2 absolute -right-10 md:right-0 top-10 z-10">
       <div className="w-72 bg-white shadow-md rounded-lg ">
@@ -42,13 +50,13 @@ export const UserMenuOptions = (): JSX.Element => {
             </Link>
           </li>
           <li className="border-t border-gray-200 py-4 px-4">
-            <Link
-              to="/"
+            <button
+              onClick={() => { void handleClearStore() }}
               className="flex items-center gap-3 text-persian-green-400 text-base"
             >
               <MdLogout />
               <p>{t('navbar.log-out')}</p>
-            </Link>
+            </button>
           </li>
         </ul>
       </div>

@@ -33,6 +33,7 @@
     "password-contain-1-special-character": "Password must contain at least 1 special character"
   },
   "user": {
-    "greeting": "hi {{name}}"
+    "greeting": "hi {{name}}",
+    "welcome-name": "Welcome {{name}}"
   }
 }

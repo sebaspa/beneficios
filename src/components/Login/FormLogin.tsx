@@ -47,9 +47,9 @@ export const FormLogin = (): JSX.Element => {
         .minNumbers(1, textPasswordContainNumber)
         .minSymbols(1, textPasswordContainSpecialCharacter)
     }),
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log(JSON.stringify(values, null, 2))
-      dispatch(loginUser(values))
+      await dispatch(loginUser(values))
     }
   })
 
@@ -98,6 +98,7 @@ export const FormLogin = (): JSX.Element => {
         <input
           type="password"
           placeholder=" "
+          autoComplete="off"
           className={
             formik.touched.password !== undefined &&
             formik.errors.password !== undefined

@@ -21,8 +21,7 @@ export const Login = (): JSX.Element => {
         <div className="flex flex-col items-center">
           <div className="w-52 h-16 bg-gray-500 mb-11"></div>
           <p className="text-2xl md:text-3xl text-black">
-            ¡{t('login.we-welcome-you')}! ¡
-            {t('user.greeting', { name: 'Sebastian' })}!
+            ¡{t('login.we-welcome-you')}!
           </p>
           <div className="my-4">
             <ChangeLanguage />
