@@ -24,7 +24,7 @@ export const InputText = ({
   handleBlur
 }: PropsInputText): JSX.Element => {
   return (
-    <div className="relative mb-6">
+    <div className="relative mb-4">
       <input
         type={type}
         placeholder=" "

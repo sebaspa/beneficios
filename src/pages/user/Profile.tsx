@@ -15,10 +15,13 @@ export const Profile = (): JSX.Element => {
 
   const formik = useFormik({
     initialValues: {
+      name: user?.name,
+      lastname: user?.lastname,
       email: user?.email
     },
     validationSchema: Yup.object({
-      email: Yup.string().required(textEmailRequired).email(textEmailNotValid)
+      email: Yup.string().required(textEmailRequired).email(textEmailNotValid),
+      name: Yup.string().required()
     }),
     onSubmit: (values) => {
       console.log(values)
@@ -43,25 +46,71 @@ export const Profile = (): JSX.Element => {
         </div>
       </div>
       <form className="mt-10" onSubmit={formik.handleSubmit}>
-        <InputText
-          type="email"
-          name="email"
-          value={formik.values.email}
-          errorText={formik.errors.email}
-          labelText="Correo"
-          handleChange={formik.handleChange}
-          handleBlur={formik.handleBlur}
-          errorValidate={
-            formik.touched.email !== undefined &&
-            formik.errors.email !== undefined
-          }
-          inputClasses={
-            formik.touched.email !== undefined &&
-            formik.errors.email !== undefined
-              ? 'inputText-primary inputText-primary-red'
-              : 'inputText-primary inputText-primary-green'
-          }
-        />
+        <div className="grid grid-cols-12 gap-4">
+          <div className="col-span-12 md:col-span-6">
+            <InputText
+              type="text"
+              name="name"
+              value={formik.values.name}
+              errorText={formik.errors.name}
+              labelText="Nombre"
+              handleChange={formik.handleChange}
+              handleBlur={formik.handleBlur}
+              errorValidate={
+                formik.touched.name !== undefined &&
+                formik.errors.name !== undefined
+              }
+              inputClasses={
+                formik.touched.name !== undefined &&
+                formik.errors.name !== undefined
+                  ? 'inputText-primary inputText-primary-red'
+                  : 'inputText-primary inputText-primary-green'
+              }
+            />
+          </div>
+          <div className="col-span-12 md:col-span-6">
+            <InputText
+              type="text"
+              name="lastname"
+              value={formik.values.lastname}
+              errorText={formik.errors.lastname}
+              labelText="Apellidos"
+              handleChange={formik.handleChange}
+              handleBlur={formik.handleBlur}
+              errorValidate={
+                formik.touched.lastname !== undefined &&
+                formik.errors.lastname !== undefined
+              }
+              inputClasses={
+                formik.touched.lastname !== undefined &&
+                formik.errors.lastname !== undefined
+                  ? 'inputText-primary inputText-primary-red'
+                  : 'inputText-primary inputText-primary-green'
+              }
+            />
+          </div>
+          <div className="col-span-12 md:col-span-6">
+            <InputText
+              type="email"
+              name="email"
+              value={formik.values.email}
+              errorText={formik.errors.email}
+              labelText="Correo"
+              handleChange={formik.handleChange}
+              handleBlur={formik.handleBlur}
+              errorValidate={
+                formik.touched.email !== undefined &&
+                formik.errors.email !== undefined
+              }
+              inputClasses={
+                formik.touched.email !== undefined &&
+                formik.errors.email !== undefined
+                  ? 'inputText-primary inputText-primary-red'
+                  : 'inputText-primary inputText-primary-green'
+              }
+            />
+          </div>
+        </div>
         <div>
           <button
             type="submit"
