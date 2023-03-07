@@ -1,24 +1,24 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
-import en from "./en/en.json";
-import es from "./es/es.json";
+import en from './en/en.json'
+import es from './es/es.json'
 
 const resources = {
   en: {
-    translation: en,
+    translation: en
   },
   es: {
-    translation: es,
-  },
-};
+    translation: es
+  }
+}
 
-i18n.use(initReactI18next).init({
+void i18n.use(initReactI18next).init({
   resources,
-  lng: "es",
+  lng: 'es',
   interpolation: {
-    escapeValue: false,
-  },
-});
+    escapeValue: false
+  }
+})
 
-export default i18n;
+export default i18n

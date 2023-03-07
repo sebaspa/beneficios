@@ -37,7 +37,7 @@ export const UserMenuOptions = (): JSX.Element => {
         </div>
         <ChangeLanguage />
         <div className="text-center py-7">
-          <Link to="/" className="text-sm px-5 py-3 btn-outlined-primary">
+          <Link to="/user/profile" className="text-sm px-5 py-3 btn-outlined-primary">
             {t('navbar.view-my-profile')}
           </Link>
         </div>
