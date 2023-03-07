@@ -1,0 +1,40 @@
+{
+  "key": "hello world",
+  "navbar": {
+    "my-compensation": "Mi compensación",
+    "vacations": "Vacaciones",
+    "benefits": "Beneficios",
+    "certificates": "Certificados",
+    "my-payroll-receipt": "Mi recibo de nómina",
+    "view-my-profile": "Ver mi perfil",
+    "help": "Ayuda",
+    "log-out": "Cerrar sesión"
+  },
+  "footer": {
+    "terms-and-conditions": "Términos y condiciones",
+    "privacy-notice": "Aviso de privacidad",
+    "user-support": "Soporte al usuario",
+    "copyright": "Diblo Corporate. Todos los derechos reservados 2020. ©2020 ANHEUSER-BUSCH INBEV S.A."
+  },
+  "login": {
+    "we-welcome-you": "Te damos la bienvenida",
+    "email": "Email",
+    "password": "Contraseña",
+    "log-in": "Iniciar sesión",
+    "login-failed": "Error al iniciar sesión, por favor intente nuevamente"
+  },
+  "validations": {
+    "password-is-required": "La contraseña es requerida",
+    "email-is-required": "El email es requerido",
+    "email-not-valid": "El email no es válido",
+    "password-not-valid": "La contraseña debe contener 8 o más caracteres, al menos uno de cada tipo: mayúsculas, minúsculas, números y especiales",
+    "password-contain-1-lower-case-letter": "La contraseña debe contener al menos 1 letra minúscula",
+    "password-contain-1-upper-case-letter": "La contraseña debe contener al menos 1 letra mayúscula",
+    "password-contain-1-number": "La contraseña debe contener al menos 1 número",
+    "password-contain-1-special-character": "La contraseña debe contener al menos un carácter especial"
+  },
+  "user": {
+    "greeting": "hola {{name}}",
+    "welcome-name": "Bienvenido {{name}}"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "email": "sebaspa0107@yopmail.com",
+      "password": "$2a$10$XKtV/uLWXh4f4g94MnhF1.196WrW6xeI3t/rSNqnIoEEctF3qMRVi",
+      "name": "Juan Sebastian",
+      "lastname": "Parra Manchola",
+      "username": "sebaspa0107",
+      "sharpId": "0123456789",
+      "photo": "https://i.pravatar.cc/150?u=sebaspa0107",
+      "country": "Colombia",
+      "company": "Bavaria",
+      "job": "Front end developer",
+      "band": "VII-B",
+      "vc": "People",
+      "id": "R069VEI"
+    }
+  ],
+  "posts": [
+    {
+      "title": "This is a title",
+      "img": "images/image-1.png",
+      "description": "Lorem ipsum dolor sit amet",
+      "id": 1
+    },
+    {
+      "title": "This is a title auth",
+      "img": "images/image-1.png",
+      "description": "Lorem ipsum dolor sit amet with auth",
+      "id": 2
+    }
+  ]
+}

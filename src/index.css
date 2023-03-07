@@ -49,10 +49,42 @@
   */
 
   .btn-contained-primary {
-    @apply bg-persian-green-100 text-black font-medium  rounded-3xl border border-persian-green-400 hover:bg-persian-green-200;
+    @apply bg-persian-green-100 text-black font-medium  rounded-3xl border border-persian-green-400 hover:bg-persian-green-200 disabled:bg-gray-300 disabled:text-gray-500 disabled:border-gray-400 disabled:cursor-not-allowed;
   }
 
   .btn-outlined-primary {
     @apply rounded-3xl border bg-white border-persian-green-200 text-persian-green-400 hover:bg-persian-green-50;
+  }
+
+  /*Formularios*/
+
+  .inputText-primary {
+    @apply form-input bg-transparent text-sm px-3 py-2 rounded-md w-full focus:outline-none;
+  }
+
+  .inputText-primary-green {
+    @apply focus:border-persian-green-400 focus:ring-1 focus:ring-persian-green-400 border-gray-500;
+  }
+
+  .inputText-primary-red {
+    @apply focus:border-red-400 focus:ring-1 focus:ring-red-400 border-red-400;
+  }
+
+  .inputText-primary:focus-within ~ label,
+  .inputText-primary:not(:placeholder-shown) ~ label {
+    @apply transform scale-75 -translate-y-4 -translate-x-2 bg-white px-2 z-0;
+  }
+
+  .inputText-primary-green:focus-within ~ label,
+  .inputText-primary-green:not(:placeholder-shown) ~ label {
+    @apply text-persian-green-400;
+  }
+  .inputText-primary-red:focus-within ~ label,
+  .inputText-primary-red:not(:placeholder-shown) ~ label {
+    @apply text-red-400;
+  }
+
+  .bg-box-test {
+    @apply w-40 h-40 border-2 border-yellow-600 mb-4;
   }
 }

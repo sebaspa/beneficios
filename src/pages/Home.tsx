@@ -1,4 +1,4 @@
-export const Home = () => {
+export const Home = (): JSX.Element => {
   return (
     <div>Home</div>
   )

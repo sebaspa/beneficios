@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
-import { BiMenu } from "react-icons/bi";
-import { menuItems } from "../../constants";
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { NavLink } from 'react-router-dom'
+import { BiMenu } from 'react-icons/bi'
+import { menuItems } from '../../constants'
 
-export const MoblieMenu = () => {
-  const [t] = useTranslation("global");
-  const [showMenu, setShowMenu] = useState(false);
+export const MoblieMenu = (): JSX.Element => {
+  const [t] = useTranslation()
+  const [showMenu, setShowMenu] = useState(false)
 
-  const handleShowMenu = () => {
-    setShowMenu(!showMenu);
-  };
+  const handleShowMenu = (): void => {
+    setShowMenu(!showMenu)
+  }
 
   return (
     <div className="block relative lg:hidden">
@@ -31,5 +31,5 @@ export const MoblieMenu = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
