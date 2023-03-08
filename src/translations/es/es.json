@@ -24,17 +24,22 @@
     "login-failed": "Error al iniciar sesión, por favor intente nuevamente"
   },
   "validations": {
-    "password-is-required": "La contraseña es requerida",
+    "required": "{{field}} es un campo requerido",
     "email-is-required": "El email es requerido",
     "email-not-valid": "El email no es válido",
+    "password-is-required": "La contraseña es requerida",
     "password-not-valid": "La contraseña debe contener 8 o más caracteres, al menos uno de cada tipo: mayúsculas, minúsculas, números y especiales",
     "password-contain-1-lower-case-letter": "La contraseña debe contener al menos 1 letra minúscula",
     "password-contain-1-upper-case-letter": "La contraseña debe contener al menos 1 letra mayúscula",
     "password-contain-1-number": "La contraseña debe contener al menos 1 número",
-    "password-contain-1-special-character": "La contraseña debe contener al menos un carácter especial"
+    "password-contain-1-special-character": "La contraseña debe contener al menos un carácter especial",
+    "name-is-required": "El nombre es requerido"
   },
   "user": {
     "greeting": "hola {{name}}",
-    "welcome-name": "Bienvenido {{name}}"
+    "welcome-name": "Bienvenido {{name}}",
+    "name": "Nombre",
+    "lastname": "Apellidos",
+    "email": "Correo"
   }
 }

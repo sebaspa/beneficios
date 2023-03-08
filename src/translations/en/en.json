@@ -23,17 +23,23 @@
     "login-failed": "Login failed, please try again"
   },
   "validations": {
-    "password-is-required": "Password is required",
+    "required": "{{field}} is a required field",
     "email-is-required": "Email is required",
     "email-not-valid": "Email is not valid",
+    "password-is-required": "Password is required",
     "password-not-valid": "Password must contain 8 or more characters with at least one of each: uppercase, lowercase, number and special",
     "password-contain-1-lower-case-letter": "Password must contain at least 1 lower case letter",
     "password-contain-1-upper-case-letter": "Password must contain at least 1 upper case letter",
     "password-contain-1-number": "Password must contain at least 1 number",
-    "password-contain-1-special-character": "Password must contain at least 1 special character"
+    "password-contain-1-special-character": "Password must contain at least 1 special character",
+    "name-is-required": "Name is required"
+
   },
   "user": {
     "greeting": "hi {{name}}",
-    "welcome-name": "Welcome {{name}}"
+    "welcome-name": "Welcome {{name}}",
+    "name": "Name",
+    "lastname": "Last name",
+    "email": "Email"
   }
 }

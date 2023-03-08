@@ -10,8 +10,9 @@ export const Profile = (): JSX.Element => {
   const [t] = useTranslation()
   const { user } = useSelector((store: RootState) => store.user)
 
-  const textEmailRequired = t('validations.email-is-required')
+  const textEmailRequired = t('validations.required', { field: t('user.email') })
   const textEmailNotValid = t('validations.email-not-valid')
+  const textNameRequired = t('validations.name-is-required')
 
   const formik = useFormik({
     initialValues: {
@@ -21,7 +22,16 @@ export const Profile = (): JSX.Element => {
     },
     validationSchema: Yup.object({
       email: Yup.string().required(textEmailRequired).email(textEmailNotValid),
-      name: Yup.string().required()
+      name: Yup.string()
+        .required(textNameRequired)
+        .matches(/^[A-Za-záéíóúÁÉÍÓÚñÑ ]*$/, 'Please enter valid name')
+        .min(3)
+        .max(40),
+      lastname: Yup.string()
+        .required(textNameRequired)
+        .matches(/^[A-Za-záéíóúÁÉÍÓÚñÑ ]*$/, 'Please enter valid name')
+        .min(3)
+        .max(40)
     }),
     onSubmit: (values) => {
       console.log(values)
@@ -53,7 +63,7 @@ export const Profile = (): JSX.Element => {
               name="name"
               value={formik.values.name}
               errorText={formik.errors.name}
-              labelText="Nombre"
+              labelText={t('user.name')}
               handleChange={formik.handleChange}
               handleBlur={formik.handleBlur}
               errorValidate={
@@ -74,7 +84,7 @@ export const Profile = (): JSX.Element => {
               name="lastname"
               value={formik.values.lastname}
               errorText={formik.errors.lastname}
-              labelText="Apellidos"
+              labelText={t('user.lastname')}
               handleChange={formik.handleChange}
               handleBlur={formik.handleBlur}
               errorValidate={
@@ -95,7 +105,7 @@ export const Profile = (): JSX.Element => {
               name="email"
               value={formik.values.email}
               errorText={formik.errors.email}
-              labelText="Correo"
+              labelText={t('user.email')}
               handleChange={formik.handleChange}
               handleBlur={formik.handleBlur}
               errorValidate={
