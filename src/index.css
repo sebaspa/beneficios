@@ -1,90 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "./assets/styles/base.css";
+@import "tailwindcss/components";
 
-@layer base {
-  html,
-  body {
-    font-family: "Roboto", sans-serif;
-  }
-}
+@import "./assets/styles/mainMenu.css";
+@import "./assets/styles/buttons.css";
+@import "./assets/styles/form.css";
 
-@layer components {
-  /*
-  Main menu
-  */
-  .mainMenu__a {
-    @apply text-white px-4 py-5 hover:text-persian-green-50 relative;
-  }
+@import "tailwindcss/utilities";
 
-  .mainMenu__a.active::before {
-    content: "";
-    @apply block absolute bottom-0 w-full h-1 rounded-t -ml-4 bg-persian-green-50;
-  }
-
-  /*
-  Menu mobile
-  */
-  .mobileMainMenu {
-    @apply rounded-lg;
-  }
-  .mobileMainMenu li {
-    @apply border-t border-gray-200;
-  }
-  .mobileMainMenu li:first-child {
-    @apply border-0;
-  }
-  .mobileMainMenu li:first-child a {
-    @apply rounded-t-lg;
-  }
-  .mobileMainMenu li a {
-    @apply text-persian-green-400 text-base py-4 px-4 block;
-  }
-  .mobileMainMenu li a.active {
-    @apply bg-persian-green-50;
-  }
-
-  /*
-  Botones
-  */
-
-  .btn-contained-primary {
-    @apply bg-persian-green-100 text-black font-medium  rounded-3xl border border-persian-green-400 hover:bg-persian-green-200 disabled:bg-gray-300 disabled:text-gray-500 disabled:border-gray-400 disabled:cursor-not-allowed;
-  }
-
-  .btn-outlined-primary {
-    @apply rounded-3xl border bg-white border-persian-green-200 text-persian-green-400 hover:bg-persian-green-50;
-  }
-
-  /*Formularios*/
-
-  .inputText-primary {
-    @apply form-input bg-transparent text-sm px-3 py-2 rounded-md w-full focus:outline-none;
-  }
-
-  .inputText-primary-green {
-    @apply focus:border-persian-green-400 focus:ring-1 focus:ring-persian-green-400 border-gray-500;
-  }
-
-  .inputText-primary-red {
-    @apply focus:border-red-400 focus:ring-1 focus:ring-red-400 border-red-400;
-  }
-
-  .inputText-primary:focus-within ~ label,
-  .inputText-primary:not(:placeholder-shown) ~ label {
-    @apply transform scale-75 -translate-y-4 -translate-x-2 bg-white px-2 z-0;
-  }
-
-  .inputText-primary-green:focus-within ~ label,
-  .inputText-primary-green:not(:placeholder-shown) ~ label {
-    @apply text-persian-green-400;
-  }
-  .inputText-primary-red:focus-within ~ label,
-  .inputText-primary-red:not(:placeholder-shown) ~ label {
-    @apply text-red-400;
-  }
-
-  .bg-box-test {
-    @apply w-40 h-40 border-2 border-yellow-600 mb-4;
-  }
-}

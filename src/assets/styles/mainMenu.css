@@ -1,0 +1,11 @@
+/*
+  Main menu
+  */
+.mainMenu__a {
+  @apply text-white px-4 py-5 hover:text-persian-green-50 relative;
+}
+
+.mainMenu__a.active::before {
+  content: "";
+  @apply block absolute bottom-0 w-full h-1 rounded-t -ml-4 bg-persian-green-50;
+}
