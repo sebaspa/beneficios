@@ -11,8 +11,18 @@ export const Profile = (): JSX.Element => {
   const { user } = useSelector((store: RootState) => store.user)
 
   const textEmailRequired = t('validations.required', { field: t('user.email') })
-  const textEmailNotValid = t('validations.email-not-valid')
-  const textNameRequired = t('validations.name-is-required')
+  const textLastnameRequired = t('validations.required', { field: t('user.lastname') })
+  const textNameRequired = t('validations.required', { field: t('user.name') })
+
+  const textEmailNotValid = t('validations.not-valid', { field: t('user.email') })
+  const textNameNotValid = t('validations.not-valid', { field: t('user.name') })
+  const textLastnameNotValid = t('validations.not-valid', { field: t('user.lastname') })
+
+  const textNameMin = t('validations.min', { field: t('user.name'), characters: '3' })
+  const textLastnameMin = t('validations.min', { field: t('user.lastname'), characters: '3' })
+
+  const textNameMax = t('validations.max', { field: t('user.name'), characters: '40' })
+  const textLastnameMax = t('validations.max', { field: t('user.lastname'), characters: '40' })
 
   const formik = useFormik({
     initialValues: {
@@ -24,14 +34,14 @@ export const Profile = (): JSX.Element => {
       email: Yup.string().required(textEmailRequired).email(textEmailNotValid),
       name: Yup.string()
         .required(textNameRequired)
-        .matches(/^[A-Za-záéíóúÁÉÍÓÚñÑ ]*$/, 'Please enter valid name')
-        .min(3)
-        .max(40),
+        .matches(/^[A-Za-záéíóúÁÉÍÓÚñÑ ]*$/, textNameNotValid)
+        .min(3, textNameMin)
+        .max(40, textNameMax),
       lastname: Yup.string()
-        .required(textNameRequired)
-        .matches(/^[A-Za-záéíóúÁÉÍÓÚñÑ ]*$/, 'Please enter valid name')
-        .min(3)
-        .max(40)
+        .required(textLastnameRequired)
+        .matches(/^[A-Za-záéíóúÁÉÍÓÚñÑ ]*$/, textLastnameNotValid)
+        .min(3, textLastnameMin)
+        .max(40, textLastnameMax)
     }),
     onSubmit: (values) => {
       console.log(values)
@@ -70,12 +80,6 @@ export const Profile = (): JSX.Element => {
                 formik.touched.name !== undefined &&
                 formik.errors.name !== undefined
               }
-              inputClasses={
-                formik.touched.name !== undefined &&
-                formik.errors.name !== undefined
-                  ? 'inputText-primary inputText-primary-red'
-                  : 'inputText-primary inputText-primary-green'
-              }
             />
           </div>
           <div className="col-span-12 md:col-span-6">
@@ -91,12 +95,6 @@ export const Profile = (): JSX.Element => {
                 formik.touched.lastname !== undefined &&
                 formik.errors.lastname !== undefined
               }
-              inputClasses={
-                formik.touched.lastname !== undefined &&
-                formik.errors.lastname !== undefined
-                  ? 'inputText-primary inputText-primary-red'
-                  : 'inputText-primary inputText-primary-green'
-              }
             />
           </div>
           <div className="col-span-12 md:col-span-6">
@@ -111,12 +109,6 @@ export const Profile = (): JSX.Element => {
               errorValidate={
                 formik.touched.email !== undefined &&
                 formik.errors.email !== undefined
-              }
-              inputClasses={
-                formik.touched.email !== undefined &&
-                formik.errors.email !== undefined
-                  ? 'inputText-primary inputText-primary-red'
-                  : 'inputText-primary inputText-primary-green'
               }
             />
           </div>

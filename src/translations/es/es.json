@@ -25,6 +25,9 @@
   },
   "validations": {
     "required": "{{field}} es un campo requerido",
+    "not-valid": "{{field}} no es válido",
+    "min": "{{field}} debe tener al menos {{characters}} caractéres",
+    "max": "{{field}} debe tener máximo {{characters}} caractéres",
     "email-is-required": "El email es requerido",
     "email-not-valid": "El email no es válido",
     "password-is-required": "La contraseña es requerida",

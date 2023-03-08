@@ -6,7 +6,6 @@ interface PropsInputText {
   value: string | number | undefined
   errorText: string | undefined
   labelText: string
-  inputClasses: string
   errorValidate: boolean
   handleChange: React.ChangeEventHandler<HTMLInputElement>
   handleBlur: React.FocusEventHandler<HTMLInputElement>
@@ -18,7 +17,6 @@ export const InputText = ({
   value,
   errorText,
   labelText,
-  inputClasses,
   errorValidate,
   handleChange,
   handleBlur
@@ -29,7 +27,10 @@ export const InputText = ({
         type={type}
         placeholder=" "
         name={name}
-        className={inputClasses}
+        className={errorValidate
+          ? 'inputText-primary inputText-primary-red'
+          : 'inputText-primary inputText-primary-green'
+        }
         onChange={handleChange}
         onBlur={handleBlur}
         value={value}

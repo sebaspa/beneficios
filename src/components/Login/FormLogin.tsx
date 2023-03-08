@@ -72,12 +72,6 @@ export const FormLogin = (): JSX.Element => {
             formik.touched.email !== undefined &&
             formik.errors.email !== undefined
           }
-          inputClasses={
-            formik.touched.email !== undefined &&
-            formik.errors.email !== undefined
-              ? 'inputText-primary inputText-primary-red'
-              : 'inputText-primary inputText-primary-green'
-          }
         />
       <InputText
           type="password"
@@ -90,12 +84,6 @@ export const FormLogin = (): JSX.Element => {
           errorValidate={
             formik.touched.password !== undefined &&
             formik.errors.password !== undefined
-          }
-          inputClasses={
-            formik.touched.password !== undefined &&
-            formik.errors.password !== undefined
-              ? 'inputText-primary inputText-primary-red'
-              : 'inputText-primary inputText-primary-green'
           }
         />
       <div>
