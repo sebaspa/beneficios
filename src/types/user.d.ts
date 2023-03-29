@@ -2,7 +2,7 @@ export interface User {
   accessToken: string
   band: string
   company: string
-  country: string
+  country: number
   email: string
   id: string
   job: string

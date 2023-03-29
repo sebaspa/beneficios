@@ -8,12 +8,44 @@
       "username": "sebaspa0107",
       "sharpId": "0123456789",
       "photo": "https://i.pravatar.cc/150?u=sebaspa0107",
-      "country": "Colombia",
+      "country": 3,
       "company": "Bavaria",
       "job": "Front end developer",
       "band": "VII-B",
       "vc": "People",
       "id": "R069VEI"
+    }
+  ],
+  "countries": [
+    {
+      "id": 1,
+      "name": "Colombia",
+      "code": "CO"
+    },
+    {
+      "id": 2,
+      "name": "México",
+      "code": "MEX"
+    },
+    {
+      "id": 3,
+      "name": "Perú",
+      "code": "PE"
+    },
+    {
+      "id": 4,
+      "name": "Ecuador",
+      "code": "EC"
+    },
+    {
+      "id": 5,
+      "name": "Venezuela",
+      "code": "VE"
+    },
+    {
+      "id": 6,
+      "name": "Honduras",
+      "code": "HO"
     }
   ],
   "posts": [
